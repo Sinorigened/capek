@@ -8,7 +8,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <header class="nav">
-  <a class="brand" href="<?php echo capek_home(); ?>">Čapek <em>Seeds</em></a>
+  <a class="brand" href="<?php echo capek_home(); ?>">Čapek <em>Seeds</em></a> <img src="<?php echo capek_img('logofooter.jpg'); ?>" alt="Sala de floración">
   <nav class="nav-links">
     <a href="<?php echo capek_home(); ?>">Inicio</a>
     <a href="<?php echo capek_home(); ?>#proceso">Método</a>
