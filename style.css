@@ -1,0 +1,142 @@
+/*
+Theme Name: Čapek Seeds
+Theme URI: https://capek.fun
+Author: Čapek Seeds
+Description: Sitio de Čapek Seeds. Activa el tema y la portada se muestra sola. La página Concierge se crea al activar.
+Version: 1.0.0
+Requires at least: 6.0
+Text Domain: capek
+*/
+
+:root{--verde:#1c3829;--verde-medio:#2d5240;--crema:#f5efe0;--crema-oscuro:#e8dfcc;--oro:#bfa060;--oro-claro:#d4b57a;--negro:#111;--gris:#6b6b6b;--blanco:#fdfaf5}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"DM Sans",sans-serif;background:var(--blanco);color:var(--negro);line-height:1.6}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,h4{font-family:"Cormorant Garamond",serif;font-weight:300;line-height:1.08;margin:0 0 16px}
+p{margin:0 0 14px}
+.wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+.label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--oro);display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.label::before{content:"";width:28px;height:1px;background:var(--oro)}
+.gold{font-style:italic;color:var(--oro)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:14px 28px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;border:1px solid transparent;cursor:pointer;font-family:inherit}
+.btn-gold{background:var(--oro);color:var(--verde);border-color:var(--oro)}
+.btn-gold:hover{background:var(--verde);color:var(--oro)}
+.btn-ghost{background:transparent;color:var(--crema);border-color:rgba(245,239,224,.4)}
+.btn-ghost:hover{border-color:var(--oro);color:var(--oro)}
+.btn-solid{background:var(--verde);color:var(--crema);border-color:var(--verde)}
+.nav{position:fixed;inset:0 0 auto 0;z-index:40;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:var(--verde);border-bottom:1px solid rgba(191,160,96,.18)}
+.brand{color:var(--crema);font-family:"Cormorant Garamond",serif;font-size:22px}
+.brand em{font-style:normal;color:var(--oro)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,239,224,.7)}
+.nav-links a:hover{color:var(--crema)}
+.nav-cta{background:var(--oro);color:var(--verde)!important;padding:10px 18px;font-weight:500}
+.burger{display:none;width:44px;height:44px;flex-direction:column;justify-content:center;gap:5px;background:none;border:0;padding:0}
+.burger span{display:block;height:1.5px;background:var(--crema)}
+.drawer{display:none;position:fixed;top:72px;left:0;right:0;z-index:39;background:var(--verde);padding:12px 24px 24px;flex-direction:column}
+.drawer.open{display:flex}
+.drawer a{color:var(--crema);padding:14px 0;border-bottom:1px solid rgba(191,160,96,.15);letter-spacing:.08em;text-transform:uppercase;font-size:14px}
+.hero{min-height:100vh;padding-top:72px;background:var(--verde);display:grid;grid-template-columns:1.05fr .95fr}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:64px 48px 72px 7vw}
+.hero h1{font-size:clamp(46px,5.4vw,78px);color:var(--crema)}
+.lede{color:rgba(245,239,224,.68);max-width:460px;font-weight:300;margin-bottom:32px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.hero-visual{position:relative;min-height:520px}
+.hero-visual img,.cover img,.frame img,.gallery img,.flat img,.macro>img,.hero-full>img.bg{width:100%;height:100%;object-fit:cover}
+.veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,56,41,.45),transparent 55%)}
+.stats{position:absolute;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(3,1fr);background:rgba(10,20,14,.78)}
+.stat{padding:18px 10px;text-align:center;border-right:1px solid rgba(191,160,96,.15)}
+.stat b{display:block;font-family:"Cormorant Garamond",serif;font-size:34px;color:var(--oro);font-weight:300}
+.stat span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,239,224,.5)}
+.band{padding:88px 0}
+.cream{background:var(--crema)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+h2{font-size:clamp(36px,4vw,54px);color:var(--verde)}
+.muted{color:var(--gris);font-weight:300}
+.frame{height:420px;overflow:hidden}
+.cards3,.cards4{display:grid;gap:2px;background:var(--crema-oscuro)}
+.cards3{grid-template-columns:repeat(3,1fr)}
+.cards4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--blanco);padding:40px 32px}
+.num{font-family:"Cormorant Garamond",serif;font-size:56px;color:var(--crema-oscuro);line-height:1}
+.card h3{font-size:26px;color:var(--verde)}
+.dark{background:var(--verde);color:var(--crema)}
+.dark h2,.dark h3,.paso h3{color:var(--crema)}
+.paso{background:var(--verde)}
+.paso img{height:160px;width:100%;object-fit:cover}
+.paso div{padding:24px}
+.paso p{color:rgba(245,239,224,.62);font-size:14px;font-weight:300}
+.why{display:grid;gap:18px}
+.why article{display:grid;grid-template-columns:12px 1fr;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--crema-oscuro)}
+.dot{width:10px;height:10px;margin-top:8px;border-radius:50%;background:var(--oro)}
+.badge{position:absolute;right:0;bottom:0;background:var(--oro);color:var(--verde);padding:16px 22px;text-align:center}
+.badge strong{display:block;font-family:"Cormorant Garamond",serif;font-size:42px;font-weight:300;line-height:1}
+.rel{position:relative}
+.gallery{display:grid;grid-template-columns:1.4fr 1fr 1fr;height:420px;gap:2px;background:#111}
+.gallery figure{position:relative;overflow:hidden;margin:0}
+.gallery figcaption{position:absolute;left:16px;bottom:16px;color:var(--oro);letter-spacing:.2em;text-transform:uppercase;font-size:11px}
+.flat{position:relative;height:280px;display:grid;place-items:center;text-align:center;color:var(--crema)}
+.flat img{position:absolute;inset:0}
+.flat div{position:relative;z-index:1;background:rgba(10,16,12,.62);padding:28px 36px}
+.flat h3{font-size:clamp(32px,4vw,52px);font-style:italic;color:var(--crema)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.quote{background:var(--blanco);padding:32px 26px;border-top:3px solid var(--oro)}
+.quote p{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:20px;color:var(--verde)}
+.quote small{color:var(--gris)}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.faq button{width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--crema-oscuro);padding:18px 0;display:flex;justify-content:space-between;gap:16px;font-family:"Cormorant Garamond",serif;font-size:20px;color:var(--verde);cursor:pointer}
+.faq p{color:var(--gris);font-weight:300;font-size:14px}
+.cta{background:var(--verde);color:var(--crema);text-align:center;padding:96px 20px}
+.cta h2{color:var(--crema)}
+.cta p{color:rgba(245,239,224,.65);max-width:460px;margin:0 auto 28px}
+.site-footer{background:#0b1a10;color:rgba(245,239,224,.55);padding:64px 0 28px}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:28px}
+.site-footer h5{color:var(--oro);letter-spacing:.2em;text-transform:uppercase;font-size:11px;font-family:"DM Sans",sans-serif;margin:0 0 14px}
+.site-footer a{display:block;margin:8px 0;font-size:14px}
+.legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(245,239,224,.08);font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.wa{position:fixed;right:20px;bottom:20px;z-index:50;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center}
+.wa svg{width:28px;height:28px;fill:#fff}
+.hero-full{position:relative;min-height:88vh;padding-top:72px;display:flex;align-items:flex-end;color:var(--crema)}
+.hero-full .shade,.macro .shade{position:absolute;inset:0}
+.hero-full .shade{background:linear-gradient(160deg,rgba(28,56,41,.88),rgba(28,56,41,.35))}
+.hero-full .inner{position:relative;z-index:1;padding:48px 0 36px;max-width:720px}
+.hero-full h1{color:var(--crema);font-size:clamp(56px,8vw,96px)}
+.bar{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(10,20,14,.82)}
+.bar div{padding:20px;border-right:1px solid rgba(191,160,96,.12)}
+.bar strong{display:block;color:var(--crema);font-size:14px}
+.bar span{color:rgba(245,239,224,.5);font-size:12px}
+.macro{position:relative;min-height:460px;display:flex;align-items:center;color:var(--crema)}
+.macro .shade{background:linear-gradient(90deg,rgba(28,56,41,.9),rgba(28,56,41,.15))}
+.macro .inner{position:relative;z-index:1;max-width:560px;padding:48px 0}
+.macro h2{color:var(--crema)}
+.metrics{display:flex;gap:32px;margin-top:20px}
+.metrics b{display:block;font-family:"Cormorant Garamond",serif;font-size:40px;color:var(--oro);font-weight:300}
+.price{font-family:"Cormorant Garamond",serif;font-size:52px;color:var(--verde);line-height:1}
+.featured{background:var(--verde);color:var(--crema)}
+.featured h3{color:var(--crema)}
+.featured .price{color:var(--oro)}
+.featured li{color:rgba(245,239,224,.75)!important;border-color:rgba(245,239,224,.12)!important}
+.ribbon{display:inline-block;background:var(--oro);color:var(--verde);font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:4px 10px;margin-bottom:10px}
+.plan ul{margin:18px 0 24px;padding:0}
+.plan li{list-style:none;padding:8px 0;border-bottom:1px solid var(--crema-oscuro);font-size:14px;color:var(--gris);font-weight:300}
+.plan .btn{width:100%}
+.tl article{display:grid;grid-template-columns:110px 1fr;gap:12px;padding-bottom:22px}
+.tl time{color:var(--oro);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.form{background:var(--verde);color:var(--crema);padding:36px 28px}
+.form label{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--oro);margin:12px 0 6px}
+.form input,.form select,.form textarea{width:100%;background:rgba(245,239,224,.06);border:1px solid rgba(191,160,96,.28);color:var(--crema);padding:12px 14px;font:inherit}
+.form textarea{min-height:96px}
+.note{font-size:12px;color:rgba(245,239,224,.45)}
+.ok{background:rgba(245,239,224,.08);padding:16px;margin-top:12px}
+@media(max-width:960px){
+.nav-links{display:none}
+.burger{display:flex}
+.hero,.split,.cards3,.cards4,.quotes,.faq,.footer-grid,.bar{grid-template-columns:1fr}
+.gallery{grid-template-columns:1fr;height:auto}
+.gallery figure{height:240px}
+.hero{display:block}
+.hero-visual{min-height:360px}
+.hero-copy{padding:48px 20px 40px}
+}
