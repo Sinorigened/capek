@@ -3,7 +3,7 @@
   <div class="hero-copy">
     <div class="label">México · Cultivo legal</div>
     <h1>De la semilla al permiso, <em class="gold">sin perder el rumbo.</em></h1>
-    <p class="lede">Acompañamiento concierge para quienes quieren cultivar cannabis de forma legal: gestión ante COFEPRIS y un plan de cultivo hecho a tu espacio.</p>
+    <p class="lede">Acompañamiento concierge para quienes quieren cultivar cannabis de forma legal: gestión ante COFEPRIS y una curaduría de cultivo hecha a tus necesidades.</p>
     <div class="row">
       <a class="btn btn-gold" href="<?php echo capek_concierge('#agendar'); ?>">Consulta gratuita</a>
       <a class="btn btn-ghost" href="<?php echo capek_concierge(); ?>">Ver Concierge 420</a>
@@ -23,9 +23,9 @@
   <div class="wrap split">
     <div>
       <div class="label">La casa</div>
-      <h2>No vendemos un PDF. <em class="gold">Caminamos el trámite contigo.</em></h2>
-      <p class="muted">Čapek Seeds nace del cultivo propio. El servicio existe para que una persona en México pueda pasar de la duda al permiso, y del permiso a una planta bien llevada.</p>
-      <p class="muted">Trabajamos con discreción, documentos en orden y un calendario que se puede seguir.</p>
+      <h2>No vendemos un PDF ni videos. <em class="gold">Caminamos el trámite contigo.</em></h2>
+      <p class="muted">Čapek Seeds nace del cultivo propio. El servicio existe para que una persona en México pueda pasar de la duda al permiso, y del permiso a una cosecha bien llevada.</p>
+      <p class="muted">Trabajamos con discreción, y un calendario que se puede seguir.</p>
       <a class="btn btn-solid" href="<?php echo capek_concierge(); ?>">Conocer los planes</a>
     </div>
     <div class="frame"><img src="<?php echo capek_img('03homeinstalacioncultivo.jpg'); ?>" alt="Instalación de cultivo"></div>
@@ -38,7 +38,7 @@
     <div class="cards3" style="margin-top:28px">
       <article class="card"><div class="num">01</div><h3>Primera vez</h3><p class="muted">Nunca has cultivado y el trámite te parece opaco. Salimos con checklist, variedad y un plan que cabe en tu casa.</p></article>
       <article class="card"><div class="num">02</div><h3>Ya cultivas</h3><p class="muted">Tienes mano, te falta el respaldo legal. Regularizamos lo que ya sabes hacer.</p></article>
-      <article class="card"><div class="num">03</div><h3>Uso medicinal</h3><p class="muted">Buscas acceso terapéutico con tu médico en el circuito.</p></article>
+     <!-- <article class="card"><div class="num">03</div><h3>Uso medicinal</h3><p class="muted">Buscas acceso terapéutico con tu médico en el circuito.</p></article> -->
     </div>
   </div>
 </section>
@@ -105,14 +105,14 @@
       <div><button type="button">¿Necesito experiencia previa?<span>+</span></button><p>No. El acompañamiento está pensado desde cero. Si ya cultivas, usamos lo que ya sabes.</p></div>
       <div><button type="button">¿El precio incluye el pago a COFEPRIS?<span>+</span></button><p>Los planes cubren preparación, revisión y seguimiento. Los derechos oficiales, si los hay, se indican aparte.</p></div>
       <div><button type="button">¿Atienden fuera de la CDMX?<span>+</span></button><p>Sí. El servicio es remoto.</p></div>
-      <div><button type="button">¿Qué pasa si hay observaciones?<span>+</span></button><p>Corregimos el expediente y damos seguimiento. En Brote y Cosecha esa respuesta no tiene costo extra.</p></div>
+      <div><button type="button">¿Qué pasa si hay observaciones?<span>+</span></button><p>Corregimos el expediente y damos seguimiento.</p></div>
     </div>
   </div>
 </section>
 <section class="cta">
   <div class="label" style="justify-content:center">Primer paso</div>
   <h2>Tu jardín legal empieza <em class="gold">con una llamada.</em></h2>
-  <p>Treinta minutos, sin costo y sin compromiso.</p>
+  <p>40 minutos, sin costo y sin compromiso.</p>
   <a class="btn btn-gold" href="<?php echo capek_concierge('#agendar'); ?>">Agendar consulta</a>
 </section>
 <?php get_footer(); ?>
