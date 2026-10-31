@@ -28,7 +28,7 @@
   </div>
 </section>
 <section class="band cream" id="paquetes">
-  <!-- <div class="wrap">
+  <div class="wrap">
     <div class="label">Planes</div>
     <h2>Semilla, Brote <em class="gold">y Cosecha.</em></h2>
     <p class="muted">Precios de orientación en pesos mexicanos, pago único.</p>
@@ -50,7 +50,7 @@
         <a class="btn btn-solid" href="#agendar">Elegir Cosecha</a>
       </article>
     </div>
-  </div> -->
+  </div> 
 </section>
 <section class="band" id="proceso">
   <div class="wrap split">
